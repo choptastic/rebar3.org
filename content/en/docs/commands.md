@@ -247,6 +247,7 @@ Runs a shell with project apps and deps in path. Intended for development use on
 | `--relvsn`, `-v`    | string | If multiple releases are present, specify which version to use                                                            |
 | `--env-file`        | string | Path to file of os environment variables to setup before expanding vars in config files                                   |
 | `--user_drv_args`   | string | Arguments passed to user_drv start function for creating custom shells                                                    |
+| `--eval`            | string | Evaluate the provided string after setup, but just before presenting the user with the Erlang shell. Roughly equivilant to erl's `-eval` option (and like erl's `-eval`, there can be more than one `--eval` argument)|
 
 The shell booted with this command has a running agent that allows running Rebar3 commands dynamically, such as `r3:compile()` or `r3:upgrade()`, and have new modules automatically reloaded. Specific namespaces can be reached by calling `r3:do(Namespace, Command)`. No arguments can be passed to these commands.
 
